@@ -8,7 +8,7 @@ sudo rm /etc/nginx/sites-available/default
 sudo rm /etc/nginx/sites-enabled/default
 
 # Create a new configuration file
-echo 'server {
+echo "server {
     listen 80 default_server;
     listen [::]:80 default_server;
     root /var/www/html;
@@ -22,7 +22,7 @@ echo 'server {
     location / {
         try_files \$uri \$uri/ = 404;
     }
-}' | sudo tee /etc/nginx/sites-available/redirect
+}" | sudo tee /etc/nginx/sites-available/redirect
 
 # Create a symbolic link to enable the new configuration
 sudo ln -s /etc/nginx/sites-available/redirect /etc/nginx/sites-enabled/

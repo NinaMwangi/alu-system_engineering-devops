@@ -11,7 +11,7 @@ echo "
 frontend haproxynode
 	bind *:80
 	mode http
-	default_backend backend servers
+	default_backend backendservers
 
 backend backendservers
 	balance roundrobin

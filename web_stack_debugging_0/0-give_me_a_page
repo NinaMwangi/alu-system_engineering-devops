@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Script to run apache2 in docker container
+sudo service apache2 restart
